@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# 加上這行做 Debug 用
+#set -xv
+
+echo "你好！請輸入一個單字："
+read MY_WORD
+
+
+if [ "$MY_WORD" == "yuhung" ]; then
+echo "你輸入的是 yuhung"
+elif [[ $MY_WORD == yuhung* ]]; then
+echo "你輸入的是開頭為 yuhung的字 $MY_WORD"
+elif [[ $MY_WORD =~ yuhung ]]; then
+echo "你輸入的是含有 yuhung的字 $MY_WORD"
+else
+echo "你輸入的是 $MY_WORD "
+fi
