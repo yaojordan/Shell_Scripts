@@ -59,4 +59,12 @@ EX:
 火車-FJDKE3AK34940  
 超機車-FFJJEEE99300  
 
+**搜尋取代**  
+Linux：`sed –i ‘s/尋找目標字串/修改後的目標字串/g’ 檔案名稱`  
+macOS：`sed –i '' ‘s/尋找目標字串/修改後的目標字串/g’ 檔案名稱` 
+
+EX:
+把檔案today20中的Doraemon改成洨叮噹  
+`ed -i '' 's/Doraemon/洨叮噹/g' today20` 
+
 
