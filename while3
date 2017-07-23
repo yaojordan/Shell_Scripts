@@ -1,0 +1,46 @@
+#!/bin/bash
+
+isQuit="FALSE"
+week=1
+hours=1
+endurance=1
+
+until [ "$isQuit" = "YES" ]
+do
+
+    if [ $week -eq 6 ] || [ $week -eq 7 ]; then
+        workingDay="FALSE"
+        echo "YA! 星期 $week 放假..."
+    fi
+
+    while [ $hours -le 8 ] && [ $week -lt 6 ]
+    do
+        echo "星期 $week ，努力工作 $hours 小時..."
+        ((hours++))
+        sleep 0.5
+    done
+
+    #忍受度+1
+    ((endurance++))
+
+    hours=0
+
+    ((week++))
+
+    if [ $week -gt 7 ]; then
+        week=1
+        echo "工作一週後想辭職嗎？(YES or ENTER to continue):"
+        read isQuit
+    fi
+    sleep 0.2
+
+    if [ $endurance -gt 23 ]; then
+        echo "回家吧廢物"
+        break
+    fi
+
+    #continue
+
+done
+
+echo "你沒工作了"

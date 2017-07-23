@@ -1,0 +1,17 @@
+#!/bin/bash
+
+for filename in *
+do
+	ext=${filename##*\.}
+	case "$ext" in
+		sh) echo "$filename : bash script"
+			;;
+		txt) echo "$filename : text file"
+			;;
+		cpp) echo "$filename : c++ src code"
+			;;
+		*) echo "$filename : unknown"
+			;;
+	esac
+done
+		

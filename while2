@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "輸入文字檔案名稱："
+read filename
+
+index=1
+while read line
+do
+echo "$index $line"
+((index++))
+done < $filename
