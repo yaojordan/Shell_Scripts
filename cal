@@ -1,0 +1,7 @@
+#!/bin/bash
+
+source calCircle
+
+result=$(CalCircleArea 5)
+
+echo "半徑5，面積 = $result"

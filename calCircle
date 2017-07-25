@@ -1,0 +1,11 @@
+#!/bin/bash
+
+CalCircleArea(){
+
+r=$1
+pi=3.14
+
+circleArea=$(echo "scale=2;$pi * ($r * $r)" | bc)
+echo $circleArea
+
+}
