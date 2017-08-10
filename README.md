@@ -69,9 +69,10 @@ EX:
 把檔案today20中的Doraemon改成洨叮噹  
 `ed -i '' 's/Doraemon/洨叮噹/g' today20`  
 
-##"", '', ``差異  
+"", ''差異  
 單引號和雙引號解決變數之間有空格的問題  
 ``表示命令替換, 先執行``中的command, 並將結果assign給某變數, 以便使用  
+
 **USERS=`who | wc -l`  
 echo "Logged in user are $USERS"**  
 
