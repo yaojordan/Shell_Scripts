@@ -23,6 +23,8 @@ $1, $2...$n：第n個參數
 $@：輸入的參數清單  
 $#：參數的總數  
 
+若引數為a b c, "$*"表示"a b c", "$@"表示"a" "b" "c"
+
 ## 指令  
 **grep**：將含有關鍵字的一整行資料印出  
 **awk**：將指定的欄位印出  
@@ -65,6 +67,12 @@ macOS：`sed –i '' ‘s/尋找目標字串/修改後的目標字串/g’ 檔�
 
 EX:
 把檔案today20中的Doraemon改成洨叮噹  
-`ed -i '' 's/Doraemon/洨叮噹/g' today20` 
+`ed -i '' 's/Doraemon/洨叮噹/g' today20`  
+
+##"", '', ``差異  
+單引號和雙引號解決變數之間有空格的問題  
+``表示命令替換, 先執行``中的command, 並將結果assign給某變數, 以便使用  
+**USERS=`who | wc -l`  
+echo "Logged in user are $USERS"**  
 
 
